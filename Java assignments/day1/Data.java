@@ -1,4 +1,4 @@
-package apurva.assignment;
+package apurva.assignment.data;
 
 	public class Data {
 		static int a;

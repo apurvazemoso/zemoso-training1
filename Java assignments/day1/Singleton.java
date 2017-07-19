@@ -1,4 +1,4 @@
-package apurva.assignment;
+package apurva.assignment.singleton;
 
 	public class Singleton {
 		String nonStaticString;

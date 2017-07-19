@@ -1,5 +1,6 @@
-package apurva.assignment;
-import apurva.assignment.*;
+package apurva.assignment.main;
+import apurva.assignment.data.*;
+import apurva.assignment.singleton.*;
 
 class Main{
 	public static void main(String[] args) {
