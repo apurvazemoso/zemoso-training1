@@ -3,8 +3,10 @@
 No errors thrown for your selected number.
 java.lang.NullPointerException
 BYE-BYE
-*/
-package day4;
+*/ 
+import java.util.*;
+/*
+package day4;*/
 class E1 extends Exception{
 	E1(String type){
 		super(type);
@@ -25,25 +27,32 @@ class E3 extends Exception{
 
 public class ExceptionHandling{
 	int numm; // 3 custom exceptions
+
 	public static void validation(ExceptionHandling hi) throws E1, E2, E3{
-		if(hi.numm>100) throw new E1("You are inelegible because of E1 criteria");
-		else if (hi.numm == 0) throw new E2("You are inelegible because of E2 criteria");
-		else if (hi.numm == 1000) throw new E2("You are inelegible because of E2 criteria");
-		else System.out.println("No errors thrown for your selected number.");
+		String str = Integer.toString(hi.numm);
+		int len = str.length();
+		if(hi.numm<100) throw new E1("You are inelegible because it is 2-digit number");
+		else if (100<=hi.numm && hi.numm <1000) throw new E2("You are inelegible because  it is 3-digit number");
+		else if (9999<hi.numm) throw new E2("You are inelegible because is "+ len + " digit number.");
+		else System.out.println("No errors thrown for 4-digit number.");
 	}
 
+	//null pointer exception thrown still 'finally' clause excecuted because case2 elements haven't been instantiated.
 	public static void main(String[] args){
-		try{
-		ExceptionHandling case1 = new ExceptionHandling();
-		case1.numm = 10;
-		validation(case1);
-		ExceptionHandling[] case2 = new ExceptionHandling[4];
-		for(int i = 0;i<4;i++){
-			case2[i].numm = i*15;
-			validation(case2[i]); //null pointer exception thrown still 'finally' clause excecuted because case2 elements haven't been instantiated.
-		}
 
-	}
+		System.out.println("Enter the number of times you wanna try. Only 4 digit number is acceptable.");
+		Scanner in1 = new Scanner(System.in);
+		int noOfTrials = in1.nextInt();
+			
+		while (noOfTrials > 0){
+			noOfTrials = noOfTrials - 1;
+		try{
+			ExceptionHandling case1 = new ExceptionHandling();
+			Scanner in = new Scanner(System.in);
+			int input = in.nextInt();
+			case1.numm = input;
+			validation(case1);
+		}
 		catch(Exception e){
 			System.out.println(e);
 		}
@@ -51,7 +60,7 @@ public class ExceptionHandling{
 		finally{
 			System.out.println("BYE-BYE");
 		}
-
+	}
 	}
 
 }
