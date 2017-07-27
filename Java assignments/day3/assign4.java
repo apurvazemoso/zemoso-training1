@@ -1,4 +1,6 @@
 package day3;
+import java.util.Scanner;
+
 interface Cycle {
        String getString();
 }
@@ -60,7 +62,14 @@ class Tricyclefactory {
 
 public class assign4 {
        public static void main(String args[]) {
-             String cycletype1 = "unicycle";
+            System.out.println("Enter which type of cycle - Unicycle, bicycle or tricycle?");
+            Scanner sc = new Scanner(System.in);
+            String test = sc.next();
+            if(test.equalsIgnoreCase("tricycle")) System.out.println(Tricyclefactory.getCycle(test).getString());
+            else if(test.equalsIgnoreCase("bicycle")) System.out.println(Bicyclefactory.getCycle(test).getString());
+            else if(test.equalsIgnoreCase("unicycle")) System.out.println(Unicyclefactory.getCycle(test).getString());
+            else System.out.println("You can type either of the three types of cycles.");
+            /* String cycletype1 = "unicycle";
              String cycletype2 = "Bicycle";
              String cycletype3 = "triCYcle";
              String string1 = Unicyclefactory.getCycle(cycletype1).getString();
@@ -68,6 +77,6 @@ public class assign4 {
              String string3 = Tricyclefactory.getCycle(cycletype3).getString();
              System.out.println(string1);
              System.out.println(string2);
-             System.out.println(string3);
+             System.out.println(string3);*/
        }
 }

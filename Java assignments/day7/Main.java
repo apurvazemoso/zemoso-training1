@@ -92,17 +92,16 @@ public class Main {
 		SList<String> linkedlist = new SList<String>();
 		SListIterator<String> node= linkedlist.iterator();
 		node.insert("hi");
-		System.out.println(linkedlist);
+		System.out.println("Inserting hi - "+linkedlist);
 		node.insert("fi");
-		System.out.println(linkedlist);
+		System.out.println("Inserting fi - "+linkedlist);
 		node.insert("ri");
-		System.out.println(linkedlist);
+		System.out.println("Inserting ri - "+linkedlist);
 		node.insert("ti");
-		System.out.println(linkedlist);
+		System.out.println("Inserting ti - "+linkedlist);
 		linkedlist.iterator().remove();
-		System.out.println(linkedlist);
+		System.out.println("Removing hi - "+linkedlist);
 		linkedlist.iterator().remove();
-		System.out.println(linkedlist);
-		
+		System.out.println("Removing fi - "+linkedlist);
 	}
 }

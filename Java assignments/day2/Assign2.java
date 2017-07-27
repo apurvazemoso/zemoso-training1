@@ -14,7 +14,7 @@ public class Assign2 {
     }
 
     Assign2(int num, int num1){
-        System.out.println(num+" "+num1);
+        System.out.println(num + " " + num1);
     }
 
     public static void main(String[] args) {

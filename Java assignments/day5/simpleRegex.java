@@ -1,14 +1,10 @@
 //Regex Sentence check that begins with capital and ends with period.
+
 package day5;
+import java.util.Scanner;
+
 public class simpleRegex {
 	public static void main(String[] args) {
-		String check = "^[A-Z][\\s\\S&&[^.:?!]]*[.:?!]$";
-		String s0 = "Disssssd dbhebdj bhf f dfnbdfjdefd.";
-		String s1 = "Lorem ipsum is - 123.";
-		String s2 = "Why why why?";
-		String s3 = "H!";
-		String s4 = "hddd.";
-
 		/*
 
 		^ means starts with.
@@ -25,12 +21,23 @@ public class simpleRegex {
 		$ means end of sentence.
 
 		*/
+		String check = "^[A-Z][\\s\\S&&[^.:?!]]*[.:?!]$";
 
-		System.out.println(s0.matches(check));
-		System.out.println(s1.matches(check));
-		System.out.println(s2.matches(check));
-		System.out.println(s3.matches(check));
-		System.out.println(s4.matches(check));
+
+		/*String s0 = "Disssssd dbhebdj bhf f dfnbdfjdefd.";
+		String s1 = "Lorem ipsum is - 123.";
+		String s2 = "Why why why?";
+		String s3 = "H!";
+		String s4 = "hddd.";*/
+		Scanner sc = new Scanner(System.in);
+		String test = sc.nextLine();
+		System.out.println("Answer of your string: " + test +" is = " + test.matches(check));
+		/*System.out.println("Answer of inbuilt test string : Disssssd dbhebdj bhf f dfnbdfjdefd. = "+ s0.matches(check));
+		System.out.println("Answer of inbuilt test string : Lorem ipsum is - 123. = " + s1.matches(check));
+		System.out.println("Answer of inbuilt test string : Why why why? = " + s2.matches(check));
+		System.out.println("Answer of inbuilt test string : H! = " + s3.matches(check));
+		System.out.println("Answer of inbuilt test string : hddd. = " + s4.matches(check));
+		*/
 		
 	}
 }
