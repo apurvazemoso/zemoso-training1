@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 /*
 The worst case time complexity is string length + 52 since HashMap's containsKey only has O(1) complexity.
-Space complexity is O(26).
+Space complexity is O(string length + 26). The space occupied by a string is (length of string + 1) byte.
 We store 26 total alphabets in hashmap, then check true for each character of the letter of the input string in the hashmap.
 If any entry in hashmap is checked false, we return incomplete string.
 */
